@@ -1,0 +1,16 @@
+@use "./abstracts";
+@use "../styles/abstracts/functions" as media;
+@use "../styles/abstracts/var" as var;
+
+body {
+  font-family: abstracts.$font;
+  background: abstracts.$bg;
+}
+
+input {
+  font-family: abstracts.$font;
+}
+
+.root__container {
+  height: 100%;
+}

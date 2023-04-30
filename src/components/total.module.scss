@@ -1,0 +1,53 @@
+
+.section__total {
+  border-radius: 10px;
+  background: #FFFBF6;
+  padding: 0 20px 24px;
+}
+
+
+.heading {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #92857A;
+  margin-bottom: 4px;
+}
+
+.currency, .amount {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  color: #382314;
+}
+
+.total__amount__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.previous__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: right;
+  color: #92857A;
+}
+
+.current__month {
+  display: flex;
+}
+
+.percent__number, .percent {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: right;
+  color: #382314;
+}
+
+.percent__wrap {
+  display: flex;
+  justify-content: end;
+}

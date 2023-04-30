@@ -1,0 +1,44 @@
+
+.item__wrap {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  height: 100%;
+
+
+  &:hover {
+    > .expenses__amount {
+      visibility: visible;
+    }
+  }
+}
+
+.item {
+  border-radius: 3px;
+  margin-bottom: 15px;
+  height: 100%;
+}
+
+.day {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #92857A;
+}
+
+.expenses__amount {
+  visibility: hidden;
+  box-shadow: (0 4px 4px rgba(0, 0, 0, 0.25));
+  background: #382314;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFBF6;
+  padding: 8px;
+  display: inline-block;
+  position: absolute;
+  top: -56px;
+  left: 0;
+}
+
