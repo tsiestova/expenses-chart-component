@@ -22,6 +22,12 @@ const getHeight = (value, maxValue) => {
     return value * 100 / maxValue;
 }
 
+
+const getMaxValue = (list) => {
+    return Math.max(...list.map((el) => el.amount));
+}
+
+
 const Card = () => {
 
     const initialState = {
@@ -42,11 +48,8 @@ const Card = () => {
 
     }, []);
 
-    const getMaxValue = () => {
-        return Math.max(...expensesData.data.map((el) => el.amount));
-    }
 
-    console.log('expensesData', expensesData);
+    const maxValue = getMaxValue(expensesData.data);
 
     return (
         <div className={globalStyles.card__wrap}>
@@ -71,10 +74,10 @@ const Card = () => {
                         <ul className={spendingStyles.expenses__list}>
                             {expensesData.data.map((el) =>
                                 <ExpensesItem
-                                    bg={el.amount === getMaxValue(el.amount) ? "#B4E0E5" : "#EC755D"}
+                                    bg={el.amount === maxValue ? "#B4E0E5" : "#EC755D"}
                                     day={el.day}
                                     value={el.amount}
-                                    height={getHeight(el.amount, getMaxValue(el.amount))}
+                                    height={getHeight(el.amount, maxValue)}
                                 />
                             )}
                         </ul>
